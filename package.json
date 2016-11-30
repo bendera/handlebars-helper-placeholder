@@ -1,0 +1,28 @@
+{
+  "name": "handlebars-helper-placeholder",
+  "version": "1.0.0",
+  "description": "Placeholder image helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bendera/handlebars-helper-placeholder.git"
+  },
+  "keywords": [
+    "handlebars",
+    "placeholder",
+    "holder.js"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendera/handlebars-helper-placeholder/issues"
+  },
+  "homepage": "https://github.com/bendera/handlebars-helper-placeholder#readme",
+  "devDependencies": {
+    "handlebars": "^4.0.6",
+    "mocha": "^3.2.0"
+  }
+}
