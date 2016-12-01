@@ -3,6 +3,7 @@
 const stripIndent = require('strip-indent');
 
 module.exports = function (params) {
+  let hash = arguments[arguments.length - 1].hash || {};
   let opts = Object.assign({
     width: '100%',
     height: '100%',
@@ -11,9 +12,9 @@ module.exports = function (params) {
     fontFamily: 'sans-serif',
     fontSize: '14px',
     fontWeight: 'bold'
-  }, params.hash || {});
+  }, hash);
 
-  if (!params.text) {
+  if (!hash.text) {
     opts.text = `${opts.width}x${opts.height}`;
   }
 

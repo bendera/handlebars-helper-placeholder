@@ -36,4 +36,17 @@ describe('placeholder helper', function() {
     });
   });
 
+  it('custom text', function(done) {
+    fs.readFile('test/expected/custom-text.svg', 'utf-8', function(err, data) {
+      if(err){
+        throw err;
+      }
+      const template = hbs.compile('{{placeholder text="Custom text"}}');
+      let expected = dataPrefix + data;
+
+      assert.equal(expected, decodeURIComponent(template({})));
+      done();
+    });
+  });
+
 });
