@@ -1,6 +1,6 @@
 {
   "name": "handlebars-helper-placeholder",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "Placeholder image helper",
   "main": "index.js",
   "scripts": {
