@@ -23,4 +23,17 @@ describe('placeholder helper', function() {
     });
   });
 
+  it('specify size', function(done) {
+    fs.readFile('test/expected/100x200.svg', 'utf-8', function(err, data) {
+      if(err){
+        throw err;
+      }
+      const template = hbs.compile('{{placeholder width="100" height="200"}}');
+      let expected = dataPrefix + data;
+
+      assert.equal(expected, decodeURIComponent(template({})));
+      done();
+    });
+  });
+
 });
