@@ -31,7 +31,7 @@ module.exports = function (params) {
         </style>
       </defs>
       <g id="holder">
-        <rect width="${opts.width}" height="${opts.height}" fill="${opts.bgColor}"></rect>
+        <rect width="100%" height="100%" fill="${opts.bgColor}"></rect>
         <g>
           <text text-anchor="middle" x="50%" y="50%" dy=".3em">${opts.text}</text>
         </g>
