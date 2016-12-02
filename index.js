@@ -7,11 +7,11 @@ module.exports = function (params) {
   let opts = Object.assign({
     width: '100%',
     height: '100%',
-    bgColor: '#dddddd',
-    fgColor: '#ffffff',
-    fontFamily: 'sans-serif',
-    fontSize: '14px',
-    fontWeight: 'bold'
+    bg: '#dddddd',
+    fg: '#ffffff',
+    font: 'sans-serif',
+    size: '14px',
+    weight: 'bold'
   }, hash);
 
   if (!hash.text) {
@@ -23,15 +23,15 @@ module.exports = function (params) {
       <defs>
         <style type="text/css">
           #holder text {
-            fill: ${opts.fgColor};
-            font-family: ${opts.fontFamily};
-            font-size: ${opts.fontSize};
-            font-weight: ${opts.fontWeight};
+            fill: ${opts.fg};
+            font-family: ${opts.font};
+            font-size: ${opts.size};
+            font-weight: ${opts.weight};
           }
         </style>
       </defs>
       <g id="holder">
-        <rect width="100%" height="100%" fill="${opts.bgColor}"></rect>
+        <rect width="100%" height="100%" fill="${opts.bg}"></rect>
         <g>
           <text text-anchor="middle" x="50%" y="50%" dy=".3em">${opts.text}</text>
         </g>
