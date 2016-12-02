@@ -49,4 +49,17 @@ describe('placeholder helper', function() {
     });
   });
 
+  it('percentage value', function(done) {
+    fs.readFile('test/expected/percentage-value.svg', 'utf-8', function(err, data) {
+      if(err){
+        throw err;
+      }
+      const template = hbs.compile('{{placeholder width="25%" height="25%"}}');
+      let expected = dataPrefix + data;
+
+      assert.equal(expected, decodeURIComponent(template({})));
+      done();
+    });
+  });
+
 });
